@@ -69,7 +69,8 @@ Or…
 1. Install Cloud foundry {for WDS environ set up and deployment} 
 - brew install cloudfoundry/tap/cf-cli
 2. Login to bluemix
-- cf login -u rtbrown@us.ibm --sso 
+- cf login -u {email} --sso
+{supply the one time key to log in}
 3. Create discovery service and credentials using cloud foundry
 - cf create-service discovery standard Discovery-Demo
 - cf create-service-key Discovery-Demo myKey
@@ -77,13 +78,14 @@ Or…
 
 Connect your instance to your app.  
 0. Copy the example .env to .env and modify it with your discovery service credentials using editor
+{consider adding .env to get ignore if cloning to Github}
 
 Test your app locally
 1. Install X code {Mac, install from Apple app store}
 2. Install Node.js 
 - brew node install
 3. Start server
-[cd to root of local directory]
+{cd to root of local directory}
 - npm install
 - npm start
 
