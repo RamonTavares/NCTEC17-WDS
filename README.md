@@ -2,13 +2,13 @@
 
 This is the repository for the NCTEC 17 Watson Discovery Service Hands On Session.
 
-#Objectives
+# Objectives
 
 1. Set up a discovery instance
 2. Have a app/repository that allows for news exploration
 3. Have a app/repository that demonstrates relevancy training
 
-#Agenda
+# Agenda
 0. Introduction ~ 5 minutes
 1. Why use Watson Discovery Service? ~ 5 minutes
 2. Review Github Repo ~ 5 minutes
@@ -17,7 +17,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 5. Example 2 - Knowledge Based Search ~ 15 minutes - https://github.com/watson-developer-cloud/discovery-starter-kit
 6. Q&A / wrap up ~10 minutes
 
-#Resources
+# Resources
 
 https://www.ibm.com/watson/services/discovery/
 - Discovery main page (1)
