@@ -43,4 +43,44 @@ https://www.npmjs.com/package/watson-developer-cloud
 https://www.ibm.com/watson/developer-resources/
 - Developer resources
 
+# General steps to installing a new app
+
+1. Clone the GitHub repo
+2. Create your discovery service instance.
+3. Connect your instance to your app.  
+4. Test your app locally
+5. Deploy your app to bluemix
+
+# Example 1 - Discovery News
+
+0. Install homebrew - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Clone the GitHub repo
+0. Copy zip file to location on your machine
+
+Create your discovery service instance.
+0. Create discovery service instance via tooling
+
+Or…
+1. Install Cloud foundry {for WDS environ set up and deployment} brew install cloudfoundry/tap/cf-cli
+2. Create discovery service and credentials using cloud foundry
+
+cf login -u rtbrown@us.ibm --sso
+
+Connect your instance to your app.  
+0. Copy the example .env to .env and modify it with your discovery service credentials using editor
+
+Test your app locally
+1. Install X code {Mac}
+2. Install Node.js - brew node install
+3. Start server
+
+cd to root of local directory
+
+npm install
+npm start
+
+Deploy your app to bluemix
+0. Compile production app
+1. Use cloud foundry to deploy app to bluemix
 
