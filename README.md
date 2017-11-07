@@ -15,7 +15,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 3. Set up of Watson Discovery ~  5 minutes
 4. Example 1 - Discovery news ~ 10 minutes - https://github.com/watson-developer-cloud/discovery-starter-kit
 5. Example 2 - Knowledge Based Search ~ 15 minutes - https://github.com/watson-developer-cloud/discovery-starter-kit
-6. Q&A / wrap up ~10 minutes
+6. Q&A / wrap up ~ 10 minutes
 
 # Resources
 
@@ -40,5 +40,7 @@ https://github.com/watson-developer-cloud/discovery-starter-kit
 https://www.npmjs.com/package/watson-developer-cloud
 - Node.js SDK
 
+https://www.ibm.com/watson/developer-resources/
+- Developer resources
 
 
