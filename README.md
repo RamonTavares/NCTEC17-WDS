@@ -15,7 +15,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 2. Review Github Repo ~ 5 minutes
 3. Set up of Watson Discovery ~  5 minutes
 4. Example 1 - Discovery news ~ 10 minutes - https://github.com/watson-developer-cloud/discovery-starter-kit
-5. Example 2 - Knowledge Based Search ~ 15 minutes - https://github.com/watson-developer-cloud/discovery-starter-kit
+5. Example 2 - Voice of the Customer ~ 15 minutes - https://www.ibm.com/watson/developercloud/starter-kits.html#voice-of-the-customer
 6. Q&A / wrap up ~ 10 minutes
 
 # Resources
@@ -32,11 +32,8 @@ https://discovery-news-demo.mybluemix.net/?cm_mc_uid=75223102214015096352970&cm_
 https://www.ibm.com/watson/developercloud/starter-kits.html#news-intelligence
 - News Intelligence starter kit (4)
 
-https://knowledge-base-search.mybluemix.net/
-- Demo of Knowledge Base search (5)
-
-https://github.com/watson-developer-cloud/discovery-starter-kit
-- Knowledge Base Search starter kit (5)
+https://www.ibm.com/watson/developercloud/starter-kits.html#voice-of-the-customer
+- Voice of the Customer starter kit (5)
 
 https://www.npmjs.com/package/watson-developer-cloud
 - Node.js SDK
@@ -92,4 +89,7 @@ Test your app locally
 Deploy your app to bluemix (not covered)
 0. Compile production app
 1. Use cloud foundry to deploy app to bluemix
+
+
+# Example 2 - Voice of the customer (app works best in Google Chrome)
 
