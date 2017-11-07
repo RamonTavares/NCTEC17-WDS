@@ -25,8 +25,14 @@ https://www.ibm.com/watson/services/discovery/
 https://console.bluemix.net/docs/services/watson/index.html#about 
 - Getting Started with Watson and IBM Cloud (3)
 
+https://discovery-news-demo.mybluemix.net/?cm_mc_uid=75223102214015096352970&cm_mc_sid_50200000=1510067331&cm_mc_sid_52640000=1510067331
+- Demo of News Intelligence starter kit (4)
+
 https://www.ibm.com/watson/developercloud/starter-kits.html#news-intelligence
 - News Intelligence starter kit (4)
+
+https://knowledge-base-search.mybluemix.net/
+- Demo of Knowledge Base search (5)
 
 https://github.com/watson-developer-cloud/discovery-starter-kit
 - Knowledge Base Search starter kit (5)
