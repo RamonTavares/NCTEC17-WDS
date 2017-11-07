@@ -5,8 +5,8 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 # Objectives
 
 1. Set up a discovery instance
-2. Have a app/repository that allows for news exploration
-3. Have a app/repository that demonstrates relevancy training
+2. Have app/repository that allows for news exploration
+3. Have app/repository that demonstrates relevancy training
 
 # Agenda
 0. Introduction ~ 5 minutes
