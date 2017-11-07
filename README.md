@@ -9,6 +9,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 3. Have app/repository that demonstrates relevancy training
 
 # Agenda
+
 0. Introduction ~ 5 minutes
 1. Why use Watson Discovery Service? ~ 5 minutes
 2. Review Github Repo ~ 5 minutes
@@ -53,34 +54,40 @@ https://www.ibm.com/watson/developer-resources/
 
 # Example 1 - Discovery News
 
-0. Install homebrew - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+Install homebrew 
+- /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Clone the GitHub repo
+
 0. Copy zip file to location on your machine
 
 Create your discovery service instance.
+
 0. Create discovery service instance via tooling
 
 Or…
-1. Install Cloud foundry {for WDS environ set up and deployment} brew install cloudfoundry/tap/cf-cli
-2. Create discovery service and credentials using cloud foundry
-
-cf login -u rtbrown@us.ibm --sso
+1. Install Cloud foundry {for WDS environ set up and deployment} 
+- brew install cloudfoundry/tap/cf-cli
+2. Login to bluemix
+- cf login -u rtbrown@us.ibm --sso 
+3. Create discovery service and credentials using cloud foundry
+- cf create-service discovery standard Discovery-Demo
+- cf create-service-key Discovery-Demo myKey
+- cf service-key Discovery-Demo myKey
 
 Connect your instance to your app.  
 0. Copy the example .env to .env and modify it with your discovery service credentials using editor
 
 Test your app locally
-1. Install X code {Mac}
-2. Install Node.js - brew node install
+1. Install X code {Mac, install from Apple app store}
+2. Install Node.js 
+- brew node install
 3. Start server
+[cd to root of local directory]
+- npm install
+- npm start
 
-cd to root of local directory
-
-npm install
-npm start
-
-Deploy your app to bluemix
+Deploy your app to bluemix (not covered)
 0. Compile production app
 1. Use cloud foundry to deploy app to bluemix
 
