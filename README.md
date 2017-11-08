@@ -81,10 +81,11 @@ Test your app locally
 1. Install X code {Mac, install from Apple app store}
 2. Install Node.js 
 - brew node install
-3. Start server
+3. Start server locally 
 {cd to root of local directory}
 - npm install
 - npm start
+4. Review app on port 3000
 
 Deploy your app to bluemix (not covered)
 
