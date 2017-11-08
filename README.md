@@ -97,12 +97,12 @@ https://console.bluemix.net/docs/services/watson/getting-started-cf.html#cloud-f
 
 # Example 2 - Voice of the customer (app works best in Google Chrome)
 
-1. Clone the GitHub repo
+Clone the GitHub repo
 
 0. Copy zip file to location on your machine
 - https://github.ibm.com/psmoraes/voc-discovery
 
-2. Create your discovery service instance.
+Create your discovery service instance.
 
 0. Create discovery service collection via tooling
 1. Create the collection voc_config
@@ -119,7 +119,7 @@ collection id
 discovery_config.json from root level of repository
 
 
-4. Open a terminal, cd to the root folder for VOC and use the curl command with the above information to upload the new configuration from the downloaded repository. Information in {} denotes variables.
+Open a terminal, cd to the root folder for VOC and use the curl command with the above information to upload the new configuration from the downloaded repository. Information in {} denotes variables.
 
     curl -X POST \
     -u "{username}":"{password}" \
@@ -128,9 +128,9 @@ discovery_config.json from root level of repository
 
 
 
-3. Connect your instance to your app.
+Connect your instance to your app.
 
-4. Test your app locally
+Test your app locally
 
-5. Deploy your app to bluemix (not covered)
+Deploy your app to bluemix (not covered)
 
