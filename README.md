@@ -106,8 +106,13 @@ Create your discovery service instance.
 
 0. Create discovery service collection via tooling
 1. Create the collection voc_config
-2. Retrieve the username and password credentials from the service details page.
-3. Retrieve the environment id and collection id from the URL by running ann empty query.
+2. Upload the configuration from the NC TEC repository.
+
+The configuration provided in the repo needs to be updated to use Natural Language understanding.
+
+To upload the existing configuration from the collection:
+Retrieve the username and password credentials from the service details page.
+Retrieve the environment id and collection id from the URL by running an empty query. Look for the hash after the environments/ to retrieve the environment id.
 
 https://gateway.watsonplatform.net/discovery/api/v1/environments/358028e7-2263-4511-9be4-34f76bdf78ed/collections/eced038e-fc2e-464c-90c3-1dd2c52105df/query?version=2017-10-16&count=&offset=&aggregation=&filter=&passages=true&deduplicate=false&highlight=true&return=&query=
 
@@ -115,8 +120,7 @@ Information needed:
 username
 password
 environment id
-collection id
-discovery_config.json from root level of repository
+discovery_config2.json from the NC TEC repository (not VOC)
 
 
 Open a terminal, cd to the root folder for VOC and use the curl command with the above information to upload the new configuration from the downloaded repository. Information in {} denotes variables.
@@ -124,13 +128,39 @@ Open a terminal, cd to the root folder for VOC and use the curl command with the
     curl -X POST \
     -u "{username}":"{password}" \
     -H "Content-Type: application/json" \
-    -d @discovery_config.json "https://gateway.watsonplatform.net/discovery/api/v1/environments/{environment_id}/configurations?version=2016-12-01"
+    -d @discovery_config2.json "https://gateway.watsonplatform.net/discovery/api/v1/environments/{environment_id}/configurations?version=2017-10-16"
 
+Once you have uploaded the configuration you may need to reload your browser to see the new configuration.
 
+Apply the configuration to the collection. Add the remaining enrichments to review_text.
+
+Note: In order to see data in visualizations for the tooling switch to the 
+convert tab. Select copy add the field review_text in the first box, add text to the second box.
+
+Once the configuration has been applied properly you can ingest your data using the tooling.
+
+Note: In order to see data in visualizations for the tooling switch to the 
+convert tab. Select copy add the field review_text in the first box, add text to the second box.
 
 Connect your instance to your app.
 
+To connect the node.js app to your instance you will need a .env file.
+
+0. Copy the .env.example file to .env
+
+Supply the following information:
+username
+password
+environment id
+collection id
+
 Test your app locally
 
+In the root directory of voc-disovery
+
+npm install
+npm start
+
+Review the app in your web browser
 Deploy your app to bluemix (not covered)
 
