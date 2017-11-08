@@ -87,6 +87,7 @@ Test your app locally
 - npm start
 
 Deploy your app to bluemix (not covered)
+
 0. Compile production app
 1. Use cloud foundry to deploy app to bluemix
 
