@@ -15,7 +15,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 2. Review Github Repo ~ 5 minutes
 3. Set up of Watson Discovery ~  5 minutes
 4. Example 1 - Discovery news ~ 10 minutes - https://github.com/watson-developer-cloud/discovery-starter-kit
-5. Example 2 - Voice of the Customer ~ 15 minutes - https://www.ibm.com/watson/developercloud/starter-kits.html#voice-of-the-customer
+5. Example 2 - Voice of the Customer ~ 15 minutes - https://github.ibm.com/psmoraes/voc-discovery
 6. Q&A / wrap up ~ 10 minutes
 
 # Resources
@@ -32,7 +32,7 @@ https://discovery-news-demo.mybluemix.net/?cm_mc_uid=75223102214015096352970&cm_
 https://www.ibm.com/watson/developercloud/starter-kits.html#news-intelligence
 - News Intelligence starter kit (4)
 
-https://www.ibm.com/watson/developercloud/starter-kits.html#voice-of-the-customer
+https://github.ibm.com/psmoraes/voc-discovery
 - Voice of the Customer starter kit (5)
 
 https://www.npmjs.com/package/watson-developer-cloud
@@ -57,6 +57,7 @@ Install homebrew
 Clone the GitHub repo
 
 0. Copy zip file to location on your machine
+- https://github.com/watson-developer-cloud/discovery-starter-kit
 
 Create your discovery service instance.
 
@@ -95,4 +96,41 @@ Deploy your app to bluemix (not covered)
 https://console.bluemix.net/docs/services/watson/getting-started-cf.html#cloud-foundry-command-line-interface
 
 # Example 2 - Voice of the customer (app works best in Google Chrome)
+
+1. Clone the GitHub repo
+
+0. Copy zip file to location on your machine
+- https://github.ibm.com/psmoraes/voc-discovery
+
+2. Create your discovery service instance.
+
+0. Create discovery service collection via tooling
+1. Create the collection voc_config
+2. Retrieve the username and password credentials from the service details page.
+3. Retrieve the environment id and collection id from the URL by running ann empty query.
+
+https://gateway.watsonplatform.net/discovery/api/v1/environments/358028e7-2263-4511-9be4-34f76bdf78ed/collections/eced038e-fc2e-464c-90c3-1dd2c52105df/query?version=2017-10-16&count=&offset=&aggregation=&filter=&passages=true&deduplicate=false&highlight=true&return=&query=
+
+Information needed:
+username
+password
+environment id
+collection id
+discovery_config.json from root level of repository
+
+
+4. Open a terminal, cd to the root folder for VOC and use the curl command with the above information to upload the new configuration from the downloaded repository. Information in {} denotes variables.
+
+    curl -X POST \
+    -u "{username}":"{password}" \
+    -H "Content-Type: application/json" \
+    -d @discovery_config.json "https://gateway.watsonplatform.net/discovery/api/v1/environments/{environment_id}/configurations?version=2016-12-01"
+
+
+
+3. Connect your instance to your app.
+
+4. Test your app locally
+
+5. Deploy your app to bluemix (not covered)
 
