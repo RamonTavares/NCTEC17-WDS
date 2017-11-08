@@ -90,6 +90,7 @@ Deploy your app to bluemix (not covered)
 0. Compile production app
 1. Use cloud foundry to deploy app to bluemix
 
+https://console.bluemix.net/docs/services/watson/getting-started-cf.html#cloud-foundry-command-line-interface
 
 # Example 2 - Voice of the customer (app works best in Google Chrome)
 
