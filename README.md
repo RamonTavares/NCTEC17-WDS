@@ -14,7 +14,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 1. Why use Watson Discovery Service? ~ 5 minutes
 2. Review Github Repo ~ 5 minutes
 3. Set up of Watson Discovery ~  5 minutes
-4. Example 1 - Discovery news ~ 10 minutes - https://github.com/watson-developer-cloud/discovery-starter-kit
+4. Example 1 - Discovery news ~ 10 minutes - https://www.ibm.com/watson/developercloud/starter-kits.html#news-intelligence
 5. Example 2 - Voice of the Customer ~ 15 minutes - https://github.ibm.com/psmoraes/voc-discovery
 6. Q&A / wrap up ~ 10 minutes
 
@@ -57,7 +57,7 @@ Install homebrew
 Clone the GitHub repo
 
 0. Copy zip file to location on your machine
-- https://github.com/watson-developer-cloud/discovery-starter-kit
+- https://www.ibm.com/watson/developercloud/starter-kits.html#news-intelligence
 
 Create your discovery service instance.
 
@@ -78,10 +78,16 @@ Connect your instance to your app.
 0. Copy the example .env to .env and modify it with your discovery service credentials using editor
 {consider adding .env to get ignore if cloning to Github}
 
+username ="{username}"
+password="{password}"
+environment_id="system"
+collection_id="news"
+
 Test your app locally
 1. Install X code {Mac, install from Apple app store}
 2. Install Node.js 
 - brew node install
+
 3. Start server locally 
 {cd to root of local directory}
 - npm install
