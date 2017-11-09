@@ -84,7 +84,7 @@ environment_id="system"
 collection_id="news"
 
 Test your app locally
-1. Install X code {Mac, install from Apple app store, needed as requirement for Homebrew}
+1. Install X code {Mac, install from Apple app store, needed as requirement for cloudfoundry, if not using cloudfoundry then skip}
 2. Install Node.js 
 - brew node install
 
