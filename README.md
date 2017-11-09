@@ -5,8 +5,8 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 # Objectives
 
 1. Set up a discovery instance
-2. Have app/repository that allows for news exploration
-3. Have app/repository that demonstrates relevancy training
+2. Have Node.js app/repository that allows for news exploration
+3. Demo a Node.js app/repository that illustrates a variety of visualizations and queries
 
 # Agenda
 
@@ -47,7 +47,7 @@ https://www.ibm.com/watson/developer-resources/
 2. Create your discovery service instance.
 3. Connect your instance to your app.  
 4. Test your app locally
-5. Deploy your app to bluemix
+5. Deploy your app to bluemix (not covered)
 
 # Example 1 - Discovery News
 
@@ -108,7 +108,7 @@ Create your discovery service instance.
 1. Create the collection voc_config
 2. Upload the configuration from the NC TEC repository.
 
-The configuration provided in the repo needs to be updated to use Natural Language understanding.
+Note: The configuration provided in the repo needs to be updated to use Natural Language Understanding.
 
 To upload the existing configuration from the collection:
 Retrieve the username and password credentials from the service details page.
@@ -162,5 +162,7 @@ npm install
 npm start
 
 Review the app in your web browser
+
 Deploy your app to bluemix (not covered)
 
+See the above instructions for the previous demo
