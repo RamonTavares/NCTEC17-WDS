@@ -163,6 +163,12 @@ collection id
 
 Same format as Example 1
 
+There are slight differences with the app since we applied a new configuration.
+The constants.ts file needs to be updated to supply the appropriate constants in order for the product search to function properly.
+
+Replace the existing constants.ts file with the file in the NC TEC repository
+src/app/shared/constants.ts
+
 Test your app locally
 
 npm install
@@ -171,6 +177,8 @@ npm start
 This time you may need to start your browser manually and navigate to http://localhost:3000
 
 Review the app in your web browser
+
+Explore the node.js app, additional configuration needs to happen in order for the enrichment visualizer page to work. See if you can figure out what changes need to happen.
 
 Deploy your app to bluemix (not covered)
 
