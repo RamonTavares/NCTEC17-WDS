@@ -6,7 +6,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 
 1. Set up a discovery instance
 2. Have Node.js app/repository that allows for news exploration
-3. Demo a Node.js app/repository that illustrates a variety of visualizations and queries
+3. Demo a Node.js app/repository that illustrates a variety of visualizations and queries (not covered)
 
 # Agenda
 
@@ -15,7 +15,7 @@ This is the repository for the NCTEC 17 Watson Discovery Service Hands On Sessio
 2. Review Github Repo ~ 5 minutes
 3. Set up of Watson Discovery ~  5 minutes
 4. Example 1 - Discovery news ~ 10 minutes - https://www.ibm.com/watson/developercloud/starter-kits.html#news-intelligence
-5. Example 2 - Voice of the Customer ~ 15 minutes - https://github.ibm.com/psmoraes/voc-discovery
+5. Example 2 - Voice of the Customer ~ 15 minutes - https://github.ibm.com/psmoraes/voc-discovery (not covered)
 6. Q&A / wrap up ~ 10 minutes
 
 # Resources
@@ -51,15 +51,15 @@ https://www.ibm.com/watson/developer-resources/
 
 # Example 1 - Discovery News
 
-Install homebrew 
+Install homebrew (For Mac, needed to install node.js if you did not download from Web)
 - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-Clone the GitHub repo
+Clone the GitHub repo (Can be done with Git or by grabbing the zip)
 
 0. Copy zip file to location on your machine
 - https://www.ibm.com/watson/developercloud/starter-kits.html#news-intelligence
 
-Create your discovery service instance.
+Create your discovery service instance. (Only needs to be done once.)
 
 0. Create discovery service instance via tooling
 
@@ -70,11 +70,11 @@ Or…
 - cf login -u {email} --sso
 {supply the one time key to log in}
 3. Create discovery service and credentials using cloud foundry
-- cf create-service discovery standard Discovery-Demo
+- cf create-service discovery lite Discovery-Demo
 - cf create-service-key Discovery-Demo myKey
 - cf service-key Discovery-Demo myKey
 
-Connect your instance to your app.  
+Connect your instance to your app.  Open a text editor (vi, emacs, notepad++...) to edit the .env.example file. 
 0. Copy the example .env to .env and modify it with your discovery service credentials using editor
 {consider adding .env to get ignore if cloning to Github}
 
@@ -84,7 +84,7 @@ environment_id="system"
 collection_id="news"
 
 Test your app locally
-1. Install X code {Mac, install from Apple app store}
+1. Install X code {Mac, install from Apple app store, needed as requirement for Homebrew}
 2. Install Node.js 
 - brew node install
 
@@ -106,7 +106,7 @@ https://console.bluemix.net/docs/services/watson/getting-started-cf.html#cloud-f
 Clone the GitHub repo
 
 0. Copy zip file to location on your machine
-- https://github.ibm.com/psmoraes/voc-discovery
+- https://github.ibm.com/psmoraes/voc-discovery <- (this app does not work out of the box and needs additional configuration)
 
 Create your discovery service instance.
 
@@ -115,6 +115,7 @@ Create your discovery service instance.
 2. Upload the configuration from the NC TEC repository.
 
 Note: The configuration provided in the repo needs to be updated to use Natural Language Understanding.
+discovery_config in the download folder is a configuration for Alchemy Language. A new configuration needs to be created that uses Natural Language Understanding enrichments, this configuration is discovery_config2.json
 
 To upload the existing configuration from the collection:
 Retrieve the username and password credentials from the service details page.
@@ -128,7 +129,6 @@ password
 environment id
 discovery_config2.json from the NC TEC repository (not VOC)
 
-
 Open a terminal, cd to the root folder for VOC and use the curl command with the above information to upload the new configuration from the downloaded repository. Information in {} denotes variables.
 
     curl -X POST \
@@ -136,17 +136,18 @@ Open a terminal, cd to the root folder for VOC and use the curl command with the
     -H "Content-Type: application/json" \
     -d @discovery_config2.json "https://gateway.watsonplatform.net/discovery/api/v1/environments/{environment_id}/configurations?version=2017-10-16"
 
-Once you have uploaded the configuration you may need to reload your browser to see the new configuration.
+The command above sends the new NLU configuration to your collection
 
-Apply the configuration to the collection. Add the remaining enrichments to review_text.
+Once you have uploaded the configuration you may need to reload your browser to see the new configuration.
+Next to Default configuration select edit to change your configuration to the new configuration you just uploaded, voc-config-new.
+
+Apply the configuration to the collection. Add any remaining enrichments to review_text.
 
 Note: In order to see data in visualizations for the tooling switch to the 
 convert tab. Select copy add the field review_text in the first box, add text to the second box.
 
 Once the configuration has been applied properly you can ingest your data using the tooling.
-
-Note: In order to see data in visualizations for the tooling switch to the 
-convert tab. Select copy add the field review_text in the first box, add text to the second box.
+Load data to your app by dragging data from the discovery-documents folder in voc-discovery-master folder to your WDS instance.
 
 Connect your instance to your app.
 
@@ -160,12 +161,14 @@ password
 environment id
 collection id
 
-Test your app locally
+Same format as Example 1
 
-In the root directory of voc-disovery
+Test your app locally
 
 npm install
 npm start
+
+This time you may need to start your browser manually and navigate to http://localhost:3000
 
 Review the app in your web browser
 
