@@ -169,6 +169,8 @@ The constants.ts file needs to be updated to supply the appropriate constants in
 Replace the existing constants.ts file with the file in the NC TEC repository
 src/app/shared/constants.ts
 
+Once you have replaced the constants.ts file check in Google Chrome to see if the product search page works.
+
 Test your app locally
 
 npm install
