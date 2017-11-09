@@ -103,7 +103,7 @@ https://console.bluemix.net/docs/services/watson/getting-started-cf.html#cloud-f
 
 # Example 2 - Voice of the customer (app works best in Google Chrome)
 
-Clone the GitHub repo
+Clone the GitHub repo (Need IBM Credentials to access?)
 
 0. Copy zip file to location on your machine
 - https://github.ibm.com/psmoraes/voc-discovery <- (this app does not work out of the box and needs additional configuration)
